@@ -36,6 +36,7 @@ Ao executar a aplicação será iniciada e estará acessível em http://localhos
 
 ### Endpoints da API
 
+
 Criar uma Nova Publicação
  - URL: /publicacoes
  - Método: POST
@@ -59,4 +60,28 @@ Criar uma Nova Publicação
   "conteudo": "Conteúdo da publicação",
   "data": "2024-05-21T13:54:38.626+00:00"
 }
+```
+
+Lista todas as publicações
+ - URL: /publicacoes
+ - Método: GET
+ - Resposta:
+
+```
+[
+    {
+        "publiId": 1,
+        "email": "exemplo7@email.com",
+        "titulo": "Título da Publicação7",
+        "conteudo": "Conteúdo da publicação7",
+        "data": "2024-05-23T15:58:39.856-03:00"
+    },
+    {
+        "publiId": 2,
+        "email": "exemplo1@email.com",
+        "titulo": "Título da Publicação1",
+        "conteudo": "Conteúdo da publicação1",
+        "data": "2024-05-23T16:00:22.768-03:00"
+    }
+]
 ```

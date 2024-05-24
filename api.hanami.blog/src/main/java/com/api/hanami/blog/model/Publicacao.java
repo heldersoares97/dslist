@@ -98,4 +98,10 @@ public class Publicacao {
 		return publiId == other.publiId;
 	}
 	
+	public Publicacao orElse(Object object) {
+		// TODO Auto-generated method stub add Denise
+		return null;
+	}
+
+	
 }

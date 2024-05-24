@@ -2,8 +2,6 @@ package com.api.hanami.blog.controller;
 
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -48,6 +46,20 @@ public class PublicacaoController {
 		List<Publicacao> publicacoes = publicacaoService.findAll();
 		return ResponseEntity.ok(publicacoes);
 	}
+	
+   // Método para obter uma publicação pelo ID add Denise
+    
+    @GetMapping("/{id}")
+    public ResponseEntity<Publicacao> getPublicacaoById(@PathVariable Integer id) {
+        Publicacao publicacao = publicacaoService.findById(id);
+        
+        if (publicacao != null) {
+            return ResponseEntity.ok(publicacao);
+        } else {
+            return ResponseEntity.notFound().build();
+        }    
+    }
+}
 
 	
-}
+

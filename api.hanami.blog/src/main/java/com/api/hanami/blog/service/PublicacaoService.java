@@ -21,4 +21,11 @@ public class PublicacaoService {
 	public List<Publicacao> findAll() {
 		return publicacaoRepository.findAll();
 	}
+	
+ // Método para buscar as publicações pelo ID add Denise
+    
+    public Publicacao findById(Integer publiId) {
+        return publicacaoRepository.findById(publiId).orElse(null);
+    }
+
 }

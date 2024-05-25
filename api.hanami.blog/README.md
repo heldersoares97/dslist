@@ -1,7 +1,7 @@
-
 # Documentação da API do Blog Hanami
 
 Esta é uma API simples de Blog que permite aos usuários criar publicações de blog. A API é construída com Spring Boot e usa um banco de dados MySQL para persistência de dados.
+
 ## Tabela de Conteúdos
 
 - [Visão Geral](#)
@@ -12,12 +12,13 @@ Esta é uma API simples de Blog que permite aos usuários criar publicações de
   - [Endpoints da API](#endpoints-da-api)
 
 ## Primeiros Passos
+
 ### Pré-requisitos
 
 Certifique-se de ter o seguinte instalado no seu sistema:
+
 - Java 17 ou superior
 - MySQL 8.0 ou superior
-
 
 ## Instalação
 
@@ -26,6 +27,7 @@ Certifique-se de ter o seguinte instalado no seu sistema:
 ```bash
   git clone https://github.com/Hanami-Staff/SQUAD-02.git
 ```
+
 2. Atualize o arquivo application.properties com as credenciais do seu banco de dados.
 
 3. Inicie o projeto.
@@ -36,11 +38,11 @@ Ao executar a aplicação será iniciada e estará acessível em http://localhos
 
 ### Endpoints da API
 
-
 Criar uma Nova Publicação
- - URL: /publicacoes
- - Método: POST
- - Corpo da Requisição:
+
+- URL: /publicacoes
+- Método: POST
+- Corpo da Requisição:
 
 ```
 {
@@ -50,7 +52,7 @@ Criar uma Nova Publicação
 }
 ```
 
- - Resposta:
+- Resposta:
 
 ```
 {
@@ -62,26 +64,41 @@ Criar uma Nova Publicação
 }
 ```
 
-Lista todas as publicações
- - URL: /publicacoes
- - Método: GET
- - Resposta:
+Listar todas as Publicações
+
+- URL: /publicacoes
+- Método: GET
+- Resposta:
 
 ```
-[
-    {
-        "publiId": 1,
-        "email": "exemplo7@email.com",
-        "titulo": "Título da Publicação7",
-        "conteudo": "Conteúdo da publicação7",
-        "data": "2024-05-23T15:58:39.856-03:00"
-    },
-    {
-        "publiId": 2,
-        "email": "exemplo1@email.com",
-        "titulo": "Título da Publicação1",
-        "conteudo": "Conteúdo da publicação1",
-        "data": "2024-05-23T16:00:22.768-03:00"
-    }
-]
+{
+  "publiId": 1,
+  "email": "usuario@exemplo.com",
+  "titulo": "Título da publicação",
+  "conteudo": "Conteúdo da publicação",
+  "data": "2024-05-21T13:54:38.626+00:00"
+},
+{
+  "publiId": 2,
+  "email": "exemplo2@email.com",
+  "titulo": "Título da Publicação2",
+  "conteudo": "Conteúdo da publicação2",
+  "data": "2024-05-23T16:00:22.768-03:00"
+}
+```
+
+Listar uma Publicação por ID
+
+- URL: /publicacoes/{id}
+- Método: GET
+- Resposta:
+
+```
+{
+  "publiId": 1,
+  "email": "usuario@exemplo.com",
+  "titulo": "Título da publicação",
+  "conteudo": "Conteúdo da publicação",
+  "data": "2024-05-21T13:54:38.626+00:00"
+}
 ```

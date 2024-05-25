@@ -102,3 +102,8 @@ Listar uma Publicação por ID
   "data": "2024-05-21T13:54:38.626+00:00"
 }
 ```
+
+Excluir Publicação como um usuário
+
+- URL:  /publicacoes/{id}
+- Método: Delete

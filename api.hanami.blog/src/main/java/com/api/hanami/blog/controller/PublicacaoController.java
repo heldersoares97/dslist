@@ -58,8 +58,26 @@ public class PublicacaoController {
         } else {
             return ResponseEntity.notFound().build();
         }    
+      }
+    
+ // Método DELETE para excluir uma publicação por ID add Denise
+    
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletePublicacaoById(@PathVariable Integer id) {
+        // Verifica se a publicação existe
+    	
+        if (publicacaoService.findById(id) != null) {
+            publicacaoService.deleteById(id); // Chama o método do serviço para excluir a publicação
+            
+            return ResponseEntity.noContent().build(); // Retorna resposta de sucesso sem conteúdo
+            
+        } else {
+            return ResponseEntity.notFound().build(); // Retorna resposta de que a publicação não foi encontrada
+        }
     }
+    
 }
+
 
 	
 

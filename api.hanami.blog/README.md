@@ -105,8 +105,5 @@ Listar uma Publicação por ID
 
 Excluir Publicação como um usuário
 
--URL:  /publicacoes/6
--Método: Delete
--Resposta:
-
-```
+- URL:  /publicacoes/{id}
+- Método: Delete

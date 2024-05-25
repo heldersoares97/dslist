@@ -27,5 +27,9 @@ public class PublicacaoService {
     public Publicacao findById(Integer publiId) {
         return publicacaoRepository.findById(publiId).orElse(null);
     }
-
+    
+    //Método para deletar uma publicação add Denise
+    public void deleteById(Integer id) {
+        publicacaoRepository.deleteById(id);
+    }
 }

@@ -11,4 +11,8 @@ import com.api.hanami.blog.model.Publicacao;
 public interface PublicacaoRepository extends JpaRepository<Publicacao, Integer> {
 	// add por Denise
 		Optional<Publicacao> findById(Integer publiId);
+		
+		// Método para excluir uma publicação por ID add Denise
+		void deleteById(Integer id); 
+		
 	}

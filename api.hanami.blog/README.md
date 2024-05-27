@@ -107,3 +107,29 @@ Excluir Publicação como um usuário
 
 - URL:  /publicacoes/{id}
 - Método: Delete
+
+Editar uma Publicação
+
+- URL: /publicacoes/{id}
+- Método: PUT
+- Corpo da Requisição:
+
+```
+{
+  "email": "usuario@exemplo.com",
+  "titulo": "Título da publicação",
+  "conteudo": "Teste de atualização"
+}
+```
+
+- Resposta:
+
+```
+{
+  "publiId": 1,
+  "email": "usuario@exemplo.com",
+  "titulo": "Título da publicação",
+  "conteudo": "Teste de atualização",
+  "data": "2024-05-21T13:54:38.626+00:00"
+}
+```

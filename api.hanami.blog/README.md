@@ -133,3 +133,32 @@ Editar uma Publicação
   "data": "2024-05-21T13:54:38.626+00:00"
 }
 ```
+
+
+Criar um comentário no ID de publicação
+
+- URL: /publicacoes/4/comentarios
+- Método: POST
+- Corpo da Requisição:
+
+```
+{
+    "content": "Este é um comentário de exemplo."
+}
+```
+
+- Resposta:
+
+```
+{
+    "id": 1,
+    "content": "Este é um comentário de exemplo.",
+    "publicacao": {
+        "publiId": 4,
+        "email": "exemplo7@email.com",
+        "titulo": "Título da Publicação7",
+        "conteudo": "Conteúdo da publicação7",
+        "data": "2024-05-25T00:28:09.788-03:00"
+    },
+    "date": "2024-06-11T20:02:41.750-03:00"
+}

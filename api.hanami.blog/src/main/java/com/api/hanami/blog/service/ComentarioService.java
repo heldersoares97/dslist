@@ -1,6 +1,7 @@
 package com.api.hanami.blog.service;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import javax.management.AttributeNotFoundException;
@@ -47,4 +48,14 @@ public class ComentarioService {
 
         return savedComment;
     }
+
+	public static List<Comentario> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Comentario> findAllByPublicacao_Id(Integer publicacaoId) {
+		return comentarioRepository.findAllByPublicacao_PubliId(publicacaoId);
+	}
+
 }

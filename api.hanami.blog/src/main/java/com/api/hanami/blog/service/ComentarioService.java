@@ -62,6 +62,16 @@ public class ComentarioService {
     public void deleteComment(Integer comentarioId) {
         comentarioRepository.deleteById(comentarioId);
     }
-
-
+	
+	public Comentario updateComentario(Integer id, ComentarioDTO comentarioDTO) {
+        Optional<Comentario> comentarioOpt = comentarioRepository.findById(id);
+        if (comentarioOpt.isPresent()) {
+            Comentario comentario = comentarioOpt.get();
+            comentario.setContent(comentarioDTO.getContent());
+            comentario.setDate(new Date());
+            return comentarioRepository.save(comentario);
+        } else {
+            return null;
+        }
+    }
 }

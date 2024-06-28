@@ -250,3 +250,33 @@ Excluir Comentário Como um usuário
 
 - URL:  /publicacoes/comentarios/1
 - Método: Delete
+
+
+
+Atualizar um Comentário:
+
+- URL: /api/publicacoes/comentarios/1
+- Método: PUT
+- Corpo da Requisição:
+
+```
+{
+    "content": "teste de atualização comentario"
+}
+```
+- Resposta:
+
+```
+{
+    "id": 1,
+    "content": "teste de atualização comentario",
+    "publicacao": {
+        "publiId": 1,
+        "email": "exemplo@email.com",
+        "titulo": "Título da Publicação",
+        "conteudo": "Conteúdo da publicação",
+        "data": "2024-05-21T10:59:21.213-03:00"
+    },
+    "date": "2024-06-28T13:52:26.121-03:00"
+}
+```

@@ -246,3 +246,7 @@ Ver detalhes de um comentario específico
     "date": "2024-06-20T20:12:35.826-03:00"
 }
 ```
+Excluir Comentário Como um usuário
+
+- URL:  /publicacoes/comentarios/1
+- Método: Delete

@@ -57,5 +57,11 @@ public class ComentarioService {
 	public List<Comentario> findAllByPublicacao_Id(Integer publicacaoId) {
 		return comentarioRepository.findAllByPublicacao_PubliId(publicacaoId);
 	}
+	
+	@Transactional
+    public void deleteComment(Integer comentarioId) {
+        comentarioRepository.deleteById(comentarioId);
+    }
+
 
 }

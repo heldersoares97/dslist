@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="utf-8" />
@@ -9,7 +9,6 @@
 	<title>Blog TECH HANAMI</title>
 	<!-- Favicon-->
 	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-	<!-- Adicioado caminho diferente fav.ico-->
 	<!-- Core theme CSS (includes Bootstrap)-->
 	<link href="css/styles.css" rel="stylesheet" />
 </head>
@@ -28,12 +27,10 @@
 					<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="#!">Sobre</a></li>
 					<li class="nav-item"><a class="nav-link" href="#!">Contato</a></li>
-					<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">TECH HANAMI </a></li>
+					<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">TECH HANAMI</a></li>
 				</ul>
 			</div>
 		</div>
-
-
 	</nav>
 
 	<main>
@@ -59,7 +56,6 @@
 							<a class="badge bg-secondary text-decoration-none link-light" href="#!">Front end</a>
 						</header>
 						<!-- Preview image figure-->
-						<!-- Preview image figure-->
 						<figure class="mb-4">
 							<img class="img-fluid rounded" src="/images/dev.jpeg" alt="Imagem de desenvolvimento" />
 						</figure>
@@ -67,8 +63,10 @@
 						<!-- Post content-->
 						<section class="mb-5">
 							<p class="fs-5 mb-4">Como Começar Como Desenvolvedor Full Stack!</p>
-							<p class="fs-5 mb-4">Se você está interessado em se tornar um desenvolvedor full stack, está
-								entrando em um campo empolgante e dinâmico da tecnologia. Desenvolvedores full stack são
+							<p class="fs-5 mb-4">Se você está interessado em se tornar um desenvolvedor full stack,
+								está
+								entrando em um campo empolgante e dinâmico da tecnologia. Desenvolvedores full stack
+								são
 								profissionais versáteis que dominam tanto o desenvolvimento front-end quanto o back-end
 								de uma aplicação web, permitindo-lhes trabalhar em todos os aspectos de um projeto.</p>
 
@@ -132,59 +130,22 @@
 									<br>
 									<div class="form-group">
 										<textarea class="form-control" rows="3" name="conteudo"
-											placeholder="Participe da discussão e crie uma publucação!" required></textarea>
+											placeholder="Participe da discussão e crie uma publicação!"
+											required></textarea>
 									</div>
 									<br>
 									<div class="text-center">
-									<button type="submit" class="btn btn-primary">Submit</button>
+										<button type="submit" class="btn btn-primary">Submit</button>
 									</div>
 								</form>
 
-								<!-- Comment with nested comments-->
-								<div class="d-flex mb-4">
-									<!-- Parent comment-->
-									<div class="flex-shrink-0"><img class="rounded-circle"
-											src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-									<div class="ms-3">
-										<div class="fw-bold">Commenter Name</div>
-										If you're going to lead a space frontier, it has to be government; it'll never
-										be private enterprise. Because the space frontier is dangerous, and it's
-										expensive, and it has unquantified risks.
-										<!-- Child comment 1-->
-										<div class="d-flex mt-4">
-											<div class="flex-shrink-0"><img class="rounded-circle"
-													src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." />
-											</div>
-											<div class="ms-3">
-												<div class="fw-bold">Commenter Name</div>
-												And under those conditions, you cannot establish a capital-market
-												evaluation of that enterprise. You can't get investors.
-											</div>
-										</div>
-										<!-- Child comment 2-->
-										<div class="d-flex mt-4">
-											<div class="flex-shrink-0"><img class="rounded-circle"
-													src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." />
-											</div>
-											<div class="ms-3">
-												<div class="fw-bold">Commenter Name</div>
-												When you put money directly to a problem, it makes a good headline.
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Single comment-->
-								<div class="d-flex">
-									<div class="flex-shrink-0"><img class="rounded-circle"
-											src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-									<div class="ms-3">
-										<div class="fw-bold">Comentários da publicação Denise </div>
-										Gostei da publicação, utilizarei no dia a dia.
-									</div>
-								</div>
+								<!-- Listagem de Publicações -->
+								<div id="listaPublicacoes"></div>
+
 							</div>
 						</div>
 					</section>
+
 				</div>
 				<!-- Side widgets-->
 				<div class="col-lg-4">
@@ -242,6 +203,9 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
 
 	</main>
 
@@ -255,6 +219,60 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
 	<script src="js/scripts.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Função para carregar as publicações
+			function carregarPublicacoes() {
+				fetch('/publicacoes')
+					.then(response => response.json())
+					.then(data => {
+						const listaPublicacoes = document.getElementById('listaPublicacoes');
+						listaPublicacoes.innerHTML = ''; // Limpa conteúdo anterior
+
+						data.forEach(publicacao => {
+							// Cria elementos HTML para exibir cada publicação
+							const postDiv = document.createElement('div');
+							postDiv.classList.add('card', 'mb-4');
+
+							const postBody = document.createElement('div');
+							postBody.classList.add('card-body');
+
+							const postTitle = document.createElement('h2');
+							postTitle.classList.add('card-title');
+							postTitle.textContent = publicacao.titulo;
+
+							const postEmail = document.createElement('p');
+							postEmail.classList.add('card-text', 'text-muted');
+							postEmail.textContent = `Email: ${publicacao.email}`;
+
+							const postContent = document.createElement('p');
+							postContent.classList.add('card-text');
+							postContent.textContent = publicacao.conteudo;
+
+							const postDate = document.createElement('small');
+							postDate.classList.add('text-muted');
+							postDate.textContent = new Date(publicacao.data).toLocaleDateString('pt-BR');
+
+							postBody.appendChild(postTitle);
+							postBody.appendChild(postEmail); // Adiciona o email
+							postBody.appendChild(postContent);
+							postBody.appendChild(postDate);
+							postDiv.appendChild(postBody);
+
+							listaPublicacoes.appendChild(postDiv);
+						});
+					})
+					.catch(error => {
+						console.error('Erro ao carregar publicações:', error);
+					});
+			}
+
+			// Chama a função para carregar as publicações ao carregar a página
+			carregarPublicacoes();
+		});
+	</script>
+
 </body>
 
 </html>

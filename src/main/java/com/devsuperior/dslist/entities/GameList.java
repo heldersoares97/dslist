@@ -12,13 +12,12 @@ import jakarta.persistence.Table;
 @Table(name = "tb_game_list")
 public class GameList {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	
+
 	public GameList() {
-		
 	}
 
 	public GameList(Long id, String name) {
@@ -58,8 +57,4 @@ public class GameList {
 		GameList other = (GameList) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
-	
 }

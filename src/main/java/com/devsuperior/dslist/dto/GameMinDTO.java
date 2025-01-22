@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entities.Game;
+import com.devsuperior.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
     
@@ -11,7 +12,8 @@ public class GameMinDTO {
     private String shortDescription;
     private String imgUrl;
 
-    // Construtor que inicializa os campos do DTO com os valores da entidade.
+    public GameMinDTO() {}  // Construtor padrão
+    
     public GameMinDTO(Game entity) {
         this.id = entity.getId();
         this.title = entity.getTitle();
@@ -21,38 +23,20 @@ public class GameMinDTO {
         this.imgUrl = entity.getImgUrl();
     }
 
-    // Construtor alternativo, caso precise inicializar o DTO diretamente.
-    public GameMinDTO(Long id, String title, Integer year, String genre, String shortDescription, String imgUrl) {
-        this.id = id;
-        this.title = title;
-        this.year = year;
-        this.genre = genre;
-        this.shortDescription = shortDescription;
-        this.imgUrl = imgUrl;
+    public GameMinDTO(GameMinProjection projection) {  // Novo construtor
+        this.id = projection.getId();
+        this.title = projection.getTitle();
+        this.year = projection.getGameYear();
+        this.shortDescription = projection.getShortDescription();
+        this.imgUrl = projection.getImgUrl();
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public Integer getYear() {
-        return year;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public String getShortDescription() {
-        return shortDescription;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
+    
+    // Getters
+    public Long getId() { return id; }
+    public String getTitle() { return title; }
+    public Integer getYear() { return year; }
+    public String getShortDescription() { return shortDescription; }
+    public String getImgUrl() { return imgUrl; }    
 }
+
 

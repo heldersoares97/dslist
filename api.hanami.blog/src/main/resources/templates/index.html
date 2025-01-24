@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>Blog TECH HANAMI</title>
+	<!-- Favicon-->
+	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<!-- Responsive navbar-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#!">TECH HANAMI</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#!">Sobre</a></li>
+					<li class="nav-item"><a class="nav-link" href="#!">Contato</a></li>
+					<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">TECH HANAMI</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+
+		<div class="page-container">
+		</div>
+
+		<!-- Page content-->
+		<div class="container mt-5">
+			<div class="row">
+				<div class="col-lg-8">
+					<!-- Post content-->
+					<article>
+						<!-- Post header-->
+						<header class="mb-4">
+							<!-- Post title-->
+							<h1 class="fw-bolder mb-1">Blog TECH HANAMI!</h1>
+							<!-- Post meta content-->
+							<div class="text-muted fst-italic mb-2">Postado em Janeiro 1, 2023 por Blog TECH HANAMI
+							</div>
+							<!-- Post categories-->
+							<a class="badge bg-secondary text-decoration-none link-light" href="#!">Developer</a>
+							<a class="badge bg-secondary text-decoration-none link-light" href="#!">Front end</a>
+						</header>
+						<!-- Preview image figure-->
+						<figure class="mb-4">
+							<img class="img-fluid rounded" src="/images/dev.jpeg" alt="Imagem de desenvolvimento" />
+						</figure>
+
+						<!-- Post content-->
+						<section class="mb-5">
+							<p class="fs-5 mb-4">Como Começar Como Desenvolvedor Full Stack!</p>
+							<p class="fs-5 mb-4">Se você está interessado em se tornar um desenvolvedor full stack,
+								está
+								entrando em um campo empolgante e dinâmico da tecnologia. Desenvolvedores full stack
+								são
+								profissionais versáteis que dominam tanto o desenvolvimento front-end quanto o back-end
+								de uma aplicação web, permitindo-lhes trabalhar em todos os aspectos de um projeto.</p>
+
+							<h2 class="fw-bolder mb-4 mt-5">Passos para se Tornar um Desenvolvedor Full Stack:</h2>
+							<p class="fs-5 mb-4">1- Dominar os Fundamentos: Comece com uma base sólida em programação.
+								Aprenda conceitos como HTML, CSS e JavaScript para o front-end, e escolha uma linguagem
+								como Python, JavaScript (Node.js), Ruby, ou Java para o back-end.</p>
+							<p class="fs-5 mb-4">2- Construa Projetos: A prática é essencial. Construa pequenos projetos
+								para aplicar o que aprendeu. Isso não apenas solidifica seu conhecimento, mas também
+								cria um portfólio que você pode mostrar aos empregadores.</p>
+							<p class="fs-5 mb-4">3- Aprenda um Framework de Front-end e Back-end: Para o front-end,
+								frameworks como React, Vue.js, ou Angular são populares. Para o back-end, frameworks
+								como Express.js (Node.js), Django (Python), Ruby on Rails (Ruby), ou Spring (Java) são
+								bem reconhecidos.</p>
+							<p class="fs-5 mb-4">4- Compreenda Banco de Dados: Familiarize-se com bancos de dados
+								relacionais (SQL) e não relacionais (NoSQL) como MySQL, PostgreSQL, MongoDB, entre
+								outros.</p>
+							<p class="fs-5 mb-4">5- Entenda DevOps e Versionamento: Aprenda sobre controle de versão
+								(Git) e práticas DevOps para colaboração eficiente e deploy contínuo.</p>
+							<p class="fs-5 mb-4">6- Aprimore suas Habilidades de Resolução de Problemas: A capacidade de
+								diagnosticar e resolver problemas é fundamental para um desenvolvedor full stack.
+								Pratique resolver desafios de programação e bugs.</p>
+							<p class="fs-5 mb-4">7- Explore e Mantenha-se Atualizado: O campo da tecnologia está sempre
+								evoluindo. Mantenha-se atualizado com novas tecnologias, padrões de codificação e
+								melhores práticas através de blogs, cursos online, conferências e comunidades de
+								desenvolvedores.</p>
+							<p class="fs-5 mb-4">Dicas Adicionais:</p>
+							<p class="fs-5 mb-4">* Networking: Participe de eventos de tecnologia e faça networking com
+								outros desenvolvedores para aprender e crescer profissionalmente.</p>
+							<p class="fs-5 mb-4">* Mentoria: Considere encontrar um mentor na área de desenvolvimento
+								full stack para orientação e conselhos.</p>
+							<p class="fs-5 mb-4">* Seja Persistente: A jornada para se tornar um desenvolvedor full
+								stack pode ser desafiadora, mas com persistência e dedicação, você pode alcançar seus
+								objetivos.</p>
+							<p class="fs-5 mb-4">Começar como desenvolvedor full stack pode ser emocionante e
+								gratificante. Lembre-se de que é uma jornada contínua de aprendizado e desenvolvimento.
+								Aproveite cada etapa e mantenha-se motivado pela paixão por criar soluções tecnológicas
+								inovadoras. </p>
+						</section>
+					</article>
+					<!-- Comments section-->
+					<section class="mb-5">
+						<div class="card bg-light">
+							<div class="card-body">
+								<!-- Comment form -->
+								<form class="mb-4" method="post" action="/publicacoes">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<input type="email" class="form-control" name="email"
+													placeholder="Email" required>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<input type="text" class="form-control" name="titulo"
+													placeholder="Título" required>
+											</div>
+										</div>
+									</div>
+									<br>
+									<div class="form-group">
+										<textarea class="form-control" rows="3" name="conteudo"
+											placeholder="Participe da discussão e crie uma publicação!"
+											required></textarea>
+									</div>
+									<br>
+									<div class="text-center">
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
+								</form>
+
+								<!-- Listagem de Publicações -->
+								<div id="listaPublicacoes"></div>
+
+							</div>
+						</div>
+					</section>
+
+				</div>
+				<!-- Side widgets-->
+				<div class="col-lg-4">
+					<!-- Search widget-->
+					<div class="card mb-4">
+						<div class="card-header"><strong>Pesquisa</strong></div>
+						<div class="card-body">
+							<div class="input-group">
+								<input class="form-control" type="text" placeholder="Enter search term..."
+									aria-label="Enter search term..." aria-describedby="button-search" />
+								<button class="btn btn-primary" id="button-search" type="button">Go SAKURA!</button>
+							</div>
+						</div>
+					</div>
+					<!-- Categories widget-->
+					<div class="card mb-4">
+						<div class="card-header"><strong>Categorias</strong></div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-sm-6">
+									<ul class="list-unstyled mb-0">
+										<li><a href="#!">Developer</a></li>
+										<li><a href="#!">HTML</a></li>
+										<li><a href="#!">Front end</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-6">
+									<ul class="list-unstyled mb-0">
+										<li><a href="#!">JavaScript</a></li>
+										<li><a href="#!">CSS</a></li>
+										<li><a href="#!">Tutorials</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-4">
+						<div class="card-header"><strong>Mais sugestões de matérias</strong></div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-sm-6">
+								</div>
+								<!-- Side widget-->
+								<div class="card mb-4">
+									<div class="card-header">Full Stack</div>
+									<ul class="list-unstyled mb-0">
+										<li><a href="#!">Ferramentas Essenciais para Full Stack</a></li>
+										<li><a href="#!">Introdução ao Node.js</a></li>
+										<li><a href="#!">Construindo um Portfólio Full Stack</a></li>
+										<li><a href="#!">Desafios do Full Stack</a></li>
+										<li><a href="#!">SQL vs. NoSQL: Qual Escolher?</a></li>
+										<li><a href="#!">Criando uma App Full Stack</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<!-- Footer-->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; Squad 2 Website 2024</p>
+		</div>
+	</footer>
+	<!-- Bootstrap core JS-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Função para carregar as publicações
+			function carregarPublicacoes() {
+				fetch('/publicacoes')
+					.then(response => response.json())
+					.then(data => {
+						const listaPublicacoes = document.getElementById('listaPublicacoes');
+						listaPublicacoes.innerHTML = ''; // Limpa conteúdo anterior
+
+						data.forEach(publicacao => {
+							// Cria elementos HTML para exibir cada publicação
+							const postDiv = document.createElement('div');
+							postDiv.classList.add('card', 'mb-4');
+
+							const postBody = document.createElement('div');
+							postBody.classList.add('card-body');
+
+							const postTitle = document.createElement('h2');
+							postTitle.classList.add('card-title');
+							postTitle.textContent = publicacao.titulo;
+
+							const postEmail = document.createElement('p');
+							postEmail.classList.add('card-text', 'text-muted');
+							postEmail.textContent = `Email: ${publicacao.email}`;
+
+							const postContent = document.createElement('p');
+							postContent.classList.add('card-text');
+							postContent.textContent = publicacao.conteudo;
+
+							const postDate = document.createElement('small');
+							postDate.classList.add('text-muted');
+							postDate.textContent = new Date(publicacao.data).toLocaleDateString('pt-BR');
+
+							postBody.appendChild(postTitle);
+							postBody.appendChild(postEmail); // Adiciona o email
+							postBody.appendChild(postContent);
+							postBody.appendChild(postDate);
+							postDiv.appendChild(postBody);
+
+							listaPublicacoes.appendChild(postDiv);
+						});
+					})
+					.catch(error => {
+						console.error('Erro ao carregar publicações:', error);
+					});
+			}
+
+			// Chama a função para carregar as publicações ao carregar a página
+			carregarPublicacoes();
+		});
+	</script>
+
+</body>
+
+</html>

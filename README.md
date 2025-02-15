@@ -1,37 +1,10 @@
-## Projeto Hanami
+# Projeto teste de um sistema de games que foi feito de modo acadêmico 
+O projeto foi feito junto com o professor Nélio Alves é foi tudo feito passo a passo 
+é funcionou tudo, porém só deu um problema em uma parte e vi que tenho deficiências a melhorar e trabalahar
+o projeto este é acadêmico e de teste é eu mesmo o fiz todo é commitei tudo tem uma pasta de hanami aqui não tem nada a ver 
+com o projeto apenas excluia ela após o download do projeto é deixe a pasta download dslist que está o arquivo como tive um probleminha 
+aqui isso ocorreu foi um erro meu que consertei serve de experiência e aprendizado der uma olhada e seja bem vindo.
 
-Para iniciar o projeto, algum membro do squad deve enviar o ***template inicial e fazer o primeiro commit para a branch main***.
-
-- Crie um **template de WebAPI** na linguagem escolhida;
-- Crie um **.gitignore** para que não seja enviado arquivos desnecessários (chequem documentação, exemplos de outros projetos no github ou pesquisem como preferir);
-- Enviar o template com o .gitignore para a **branch main** do repositório do seu squad.
-
-Após o envio do template, as tasks do projeto podem ser iniciadas.
-
-> **Material de apoio para o Git/Github:**
-> 
-
-> ***[Geral]***
-Os comandos do Git | Documentação oficial
-https://git-scm.com/docs/git/pt_BR#_os_comandos_do_git
-> 
-
-> ***[Geral]***
-APRENDA GIT E GITHUB DO ZERO - guia completo | Fernanda Kipper
-https://www.youtube.com/watch?v=pyM5QLS2h6M
-> 
-
-> ***[Branchs]***
-GIT BRANCH E GIT MERGE - Git e GitHub #03 | Gustavo Caetano
-https://www.youtube.com/watch?v=gcOhd8rvBOc
-> 
-
-> ***[Pull Request]***
-COMO FAZER UM PULL REQUEST - Git e GitHub #04 | Gustavo Caetano
-https://www.youtube.com/watch?v=IMerCpaT_zM
-> 
-
-> ***[Geral]***
-Git e Github para Iniciantes | Willian Justen [Playlist]
-https://www.youtube.com/watch?v=IBClN6VpJDw&list=PLlAbYrWSYTiPA2iEiQ2PF_A9j__C4hi0A
->
+#Tecnologias Usadas 
+#Spring boot 
+#Linguagem Java 
